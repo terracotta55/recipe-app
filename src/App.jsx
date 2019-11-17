@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Form from "./components/Form";
-import Recipes from "./components/Recipes";
+import Form from "./components/Form.jsx";
+import Recipes from "./components/Recipes.jsx";
 
 const YOUR_APP_ID = "19d99524";
 const YOUR_APP_KEY = "624a1106ed075cbb4d7e85f1dcfe9311";
@@ -22,11 +22,22 @@ class App extends Component {
     console.log(this.state.webData);
   };
 
+  componentDidMount() {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({ webData: recipes });
+  }
+
+  componentDidUpdate() {
+    const recipes = JSON.stringify(this.state.webData);
+    localStorage.setItem("recipes", recipes);
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Recipe Search</h1>
+          <h1 className="App-title">Recipe Finder</h1>
         </header>
         <Form getRecipe={this.getRecipe} />
         <Recipes webHits={this.state.webData} />

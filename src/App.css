@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
 body {
-  background:#f3f3f3;
+  background: #f3f3f3;
+  font-family: "Ubuntu", sans-serif;
 }
 
 img {
@@ -15,23 +18,29 @@ button:focus {
   outline: none;
 }
 
+form {
+  height: 120px;
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: #2c3e50;
-  height: 90px;
+  height: 120px;
   padding: 30px;
   color: white;
-  margin-bottom: 2rem;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3em;
+  font-weight: 900;
+  justify-content: center;
+  margin: 0px;
 }
 
-.recipe_buttons {
+.recipe__buttons {
   border: solid 2px #e74c3c;
   background: transparent;
   padding: 0.4rem 0.6rem;
@@ -47,7 +56,7 @@ button:focus {
   background: #fff;
   padding-bottom: 2rem;
   border-radius: 5px;
-  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.75);
   text-align: left;
   overflow: hidden;
 }
@@ -64,17 +73,16 @@ button:focus {
 }
 
 .recipes__subtitle {
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .recipes__subtitle span {
   text-transform: none;
   font-weight: 400;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 .form__input {
@@ -83,8 +91,10 @@ button:focus {
   border-bottom: solid 2px #2c3e50;
   margin-right: 10px;
   letter-spacing: 2px;
-  width: 10%;
+  width: 15%;
   padding: 0.4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .form__button {
@@ -97,18 +107,20 @@ button:focus {
   text-transform: uppercase;
   font-weight: 500;
   margin-left: 0.7rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-input[type="text"] { 
+input[type="text"] {
   outline: none;
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
+  box-shadow: 0 0 0 30px #f3f3f3 inset;
   -webkit-text-fill-color: #2c3e50 !important;
 }
 
-/******** RECIPE.js ********/
+/******** OneRecipe.js ********/
 
 .active-recipe {
   margin: 0 auto;
@@ -117,21 +129,25 @@ input:-webkit-autofill {
 
 .active-recipe__img {
   height: 500px !important;
+  /* width: auto; */
 }
 
 .active-recipe__title {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 1rem 0;
+  font-weight: 900;
+  font-size: 2rem;
 }
 
-.active-recipe__publisher, .active-recipe__website {
-  text-transform: uppercase;
+.active-recipe__source,
+.active-recipe__website,
+.active-recipe__ingredients {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.active-recipe__publisher span {
+.active-recipe__source span {
   text-transform: none;
   font-weight: 300;
   letter-spacing: 2px;
@@ -144,6 +160,13 @@ input:-webkit-autofill {
   letter-spacing: 2px;
   color: #e74c3c;
   margin-left: 10px;
+}
+
+.active-recipe__ingredients span {
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-left: 5px;
 }
 
 .active-recipe__button {
