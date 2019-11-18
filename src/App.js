@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Form from "./components/Form.jsx";
-import Recipes from "./components/Recipes.jsx";
+import Form from "./components/Form";
+import Recipes from "./components/Recipes";
 
 const YOUR_APP_ID = "19d99524";
 const YOUR_APP_KEY = "624a1106ed075cbb4d7e85f1dcfe9311";

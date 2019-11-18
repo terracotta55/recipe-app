@@ -1,14 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Router from "./components/Router.jsx";
+import Router from "./components/Router";
+// import { HashRouter } from "react-router-dom";
 // import registerServiceWorker from "./registerServiceWorker";
-import { HashRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <HashRouter>
-    <Router />
-  </HashRouter>,
-  document.getElementById("root")
-);
+ReactDOM.render(<Router />, document.getElementById("root"));
 // registerServiceWorker();

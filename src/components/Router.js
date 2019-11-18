@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import App from "../App.jsx";
-import OneRecipe from "./OneRecipe.jsx";
+import App from "../App";
+import OneRecipe from "./OneRecipe";
 
 const Router = () => {
   return (
@@ -9,6 +9,7 @@ const Router = () => {
       <Switch>
         <Route path="/" component={App} exact />
         <Route path="/recipe/:id" component={OneRecipe} />
+        <Route component={() => <div>404 Not found 1</div>} />
       </Switch>
     </BrowserRouter>
   );
