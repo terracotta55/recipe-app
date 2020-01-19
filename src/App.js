@@ -4,7 +4,8 @@ import Form from "./components/Form";
 import Recipes from "./components/Recipes";
 
 const YOUR_APP_ID = "19d99524";
-const YOUR_APP_KEY = "624a1106ed075cbb4d7e85f1dcfe9311";
+const YOUR_APP_KEY = "29bd038505c8b3bac7d93e48eb0be433";
+// const YOUR_APP_KEY = "624a1106ed075cbb4d7e85f1dcfe9311";
 // const API_KEY = "f653f67522513510e20a1928507fbe51";
 
 class App extends Component {
